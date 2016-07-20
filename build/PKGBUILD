@@ -1,0 +1,38 @@
+# Contributor: ReNoM <renom@list.ru>
+# Contributor: ava1ar <mail(dot)avatar(at)gmail(dot)com>
+# Contributor: RealGecko <realgecko@realgecko.com>
+
+pkgname=kde-cdemu-manager-kf5
+pkgver=0.6.0
+pkgrel=1
+pkgdesc="KDE CDEmu Manager is a simple frontend for CDEmu.KF5 version"
+arch=('i686' 'x86_64')
+url="https://github.com/Real-Gecko/KDE-CDEmu"
+license=('GPL')
+depends=('cdemu-daemon>=2.0')
+provides=('kde-cdemu-manager')
+conflicts=('kde-cdemu-manager')
+makedepends=('cmake>=3.3' 'kdoctools' 'qt5-tools' 'extra-cmake-modules')
+source=(https://github.com/Real-Gecko/KDE-CDEmu/archive/$pkgver.tar.gz)
+md5sums=('0d5ffa51c73e591ba2959ef6a42b7941')
+
+build() {
+  cd $srcdir/KDE-CDEmu-$pkgver
+  mkdir -p build && cd build
+  cmake -DCMAKE_INSTALL_PREFIX=`kf5-config --prefix` \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLIB_INSTALL_DIR=lib \
+    -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+    -DSYSCONF_INSTALL_DIR=/etc \
+    -DBUILD_TESTING=OFF \
+    ..
+    
+  make
+}
+
+package()
+{
+  cd $srcdir/KDE-CDEmu-$pkgver/build
+  make DESTDIR=$pkgdir install
+}
+
