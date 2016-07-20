@@ -1,0 +1,187 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# sL1pKn07 <sl1pkn07@gmail.com>, 2009, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: de\n"
+"Report-Msgid-Bugs-To: mahasler@gmail.com\n"
+"POT-Creation-Date: 2013-01-12 23:09+0100\n"
+"PO-Revision-Date: 2013-01-12 23:10+0100\n"
+"Last-Translator: Marcel Hasler\n"
+"Language-Team: Spanish <kde-i18n-de@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: file: src/mainwindow.ui:20
+#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
+#: po/rc.cpp:3 src/main.cpp:30 rc.cpp:3
+msgid "KDE CDEmu Manager"
+msgstr "KDE CDEmu Manager"
+
+#. i18n: file: src/mainwindow.ui:58
+#. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
+#: po/rc.cpp:6 rc.cpp:6
+msgid "Device"
+msgstr "Gerät"
+
+#. i18n: file: src/mainwindow.ui:63
+#. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
+#: po/rc.cpp:9 src/mainwindow.cpp:58 rc.cpp:9
+msgid "File"
+msgstr "Archivo"
+
+#. i18n: file: src/mainwindow.ui:71
+#. i18n: ectx: property (title), widget (QGroupBox, SelectImageBox)
+#: po/rc.cpp:12 rc.cpp:12
+msgid "Select image"
+msgstr "Seleccine imagen"
+
+#. i18n: file: src/mainwindow.ui:80
+#. i18n: ectx: property (text), widget (KPushButton, SelectFileButton)
+#: po/rc.cpp:15 rc.cpp:15
+msgid "..."
+msgstr "..."
+
+#. i18n: file: src/mainwindow.ui:105
+#. i18n: ectx: property (text), widget (KPushButton, MountButton)
+#: po/rc.cpp:18 rc.cpp:18
+msgid "Mount"
+msgstr "Montar"
+
+#. i18n: file: src/mainwindow.ui:125
+#. i18n: ectx: property (text), widget (KPushButton, UnmountButton)
+#: po/rc.cpp:21 rc.cpp:21
+msgid "Unmount"
+msgstr "Desmontar"
+
+#: po/rc.cpp:22 rc.cpp:22
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Gustavo Alvarez"
+
+#: po/rc.cpp:23 rc.cpp:23
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sl1pkn07@gmail.com"
+
+#: src/main.cpp:30
+msgid "A KDE Frontend to CDEmu"
+msgstr "Entorno grafico KDE de CDEmu"
+
+#: src/main.cpp:31
+msgid "Copyright (c) 2009-2013 Marcel Hasler"
+msgstr "Copyright (c) 2009-2013 Marcel Hasler"
+
+#: src/main.cpp:32
+msgid "Marcel Hasler"
+msgstr "Marcel Hasler"
+
+#: src/main.cpp:32
+msgid "Developer & Maintainer"
+msgstr "Desarollo & Mantenimiento"
+
+#: src/main.cpp:40
+msgid "Mount an image"
+msgstr "Montar Imagen"
+
+#: src/main.cpp:41
+msgid "Unmount an image"
+msgstr "Desmontar Imagen"
+
+#: src/main.cpp:42
+msgid "Show information about devices"
+msgstr "Mostrar informacion acerca de los dispositivos"
+
+#: src/mainwindow.cpp:103
+msgid "CDEmu daemon running."
+msgstr "CDEmu-Daemon funcionando."
+
+#: src/mainwindow.cpp:106
+msgid "CDEmu daemon not running."
+msgstr "El Demonio CDEmu no funciona."
+
+#: src/mainwindow.cpp:121
+msgid "Please select a file first."
+msgstr "Porfavor seleccione archivo primero"
+
+#: src/mainwindow.cpp:121 src/mainwindow.cpp:128 src/mainwindow.cpp:145
+#: src/messagebox.cpp:65
+msgid "Error"
+msgstr "Error"
+
+#: src/mainwindow.cpp:128 src/mainwindow.cpp:145
+msgid "Please select a device first."
+msgstr "Porfavor, seleccione unidad primero."
+
+#: src/messagebox.cpp:33
+msgid "Everything OK."
+msgstr ""
+
+#: src/messagebox.cpp:37
+#, fuzzy
+msgid "The selected virtual device is in use."
+msgstr ""
+"No se puede montar la imagen. Todas las unidades virtuales están en uso."
+
+#: src/messagebox.cpp:41
+msgid "The selected virtual device is not available."
+msgstr ""
+
+#: src/messagebox.cpp:45
+#, fuzzy
+msgid "All virtual devices are in use."
+msgstr ""
+"No se puede montar la imagen. Todas las unidades virtuales están en uso."
+
+#: src/messagebox.cpp:49
+#, fuzzy
+msgid "The file doesn't exist."
+msgstr "No se puede montar la imagen. El archivo no existe"
+
+#: src/messagebox.cpp:53
+msgid "Unable to connect to the CDEmu daemon."
+msgstr ""
+
+#: src/messagebox.cpp:57
+#, fuzzy
+msgid "An unknown error occured."
+msgstr "No se puede montar la imagen! Ha ocurrido un error desconocido."
+
+#~ msgid "Drive"
+#~ msgstr "Unidad"
+
+#~ msgid "Couldn't unmount the image! An unknown error occured."
+#~ msgstr "No se puede desmontar la imagen! Ha ocurrido un error desconocido."
+
+#~ msgid ""
+#~ "Couldn't connect to the CDEmu daemon.\n"
+#~ "Please make sure it is running and try again."
+#~ msgstr ""
+#~ "No se puede conectar con el demonio CDEmu.\n"
+#~ "Porfavor asegurese de que funcione y pruebe de nuevo."
+
+#~ msgid "Type"
+#~ msgstr "Tipo"
+
+#~ msgid "Loaded"
+#~ msgstr "Geladen"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nein"
+
+#~ msgid "None"
+#~ msgstr "Keine"
+
+#~ msgid "Couldn't get number of devices!"
+#~ msgstr "Konnte Anzahl der Geräte nicht holen!"
+
+#~ msgid "KDE CDEMU Manager"
+#~ msgstr "KDE CDEMU Manager"

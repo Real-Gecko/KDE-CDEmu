@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-cd-image;application/x-cue;application/x-cdrao-toc;application/libmirage-b6t;application/libmirage-c2d;application/libmirage-ccd;application/libmirage-cdi;application/libmirage-cif;application/libmirage-cue;application/libmirage-daa;application/libmirage-image;application/libmirage-iso;application/libmirage-mds;application/libmirage-nrg;application/libmirage-toc;
+Actions=mount
+StartupNotify=false
+X-KDE-StartupNotify=false
+
+[Desktop Action mount]
+Name=Mount image
+Name[de]=Abbild einbinden
+Name[es]=Montar Imagen
+Icon=media-optical
+Exec=kde_cdemu --mount %u

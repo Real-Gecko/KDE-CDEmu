@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<gui name="kde_cdemu" version="1">
+  <MenuBar>
+    <Menu name="file">
+      <Action name="quit" />
+    </Menu>
+  </MenuBar>
+</gui>
