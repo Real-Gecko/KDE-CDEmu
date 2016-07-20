@@ -20,7 +20,8 @@
 
 #include "messagebox.h"
 
-#include <KLocale>
+#include <QLocale>
+#include <klocalizedstring.h>
 #include <KMessageBox>
 
 void MessageBox::error(CDEmu::Result result)

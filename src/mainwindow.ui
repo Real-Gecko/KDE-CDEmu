@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>420</width>
-    <height>250</height>
+    <width>705</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -22,12 +22,44 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QTreeWidget" name="DeviceList">
+     <widget class="QLabel" name="historyLabel">
+      <property name="text">
+       <string>Recently used images</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="historyList">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Recently used images - click to mount&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Recently used images - click to mount&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTreeWidget" name="deviceList">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>150</height>
+       </size>
+      </property>
       <property name="baseSize">
        <size>
         <width>0</width>
         <height>0</height>
        </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of available devices , double click to select image&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of available devices , double click to select image&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="verticalScrollBarPolicy">
        <enum>Qt::ScrollBarAsNeeded</enum>
@@ -66,78 +98,27 @@
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="SelectImageBox">
-      <property name="title">
-       <string>Select image</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="KLineEdit" name="FileNameEdit"/>
-       </item>
-       <item>
-        <widget class="KPushButton" name="SelectFileButton">
-         <property name="text">
-          <string>...</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="KPushButton" name="MountButton">
-        <property name="text">
-         <string>Mount</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="KPushButton" name="UnmountButton">
+       <widget class="QPushButton" name="unmountButton">
         <property name="text">
          <string>Unmount</string>
         </property>
        </widget>
       </item>
       <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <widget class="QPushButton" name="addDevice">
+        <property name="text">
+         <string>Add Device</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="removeDevice">
+        <property name="text">
+         <string>Remove Device</string>
         </property>
-       </spacer>
+       </widget>
       </item>
      </layout>
     </item>
@@ -148,25 +129,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>420</width>
-     <height>21</height>
+     <width>705</width>
+     <height>28</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>klineedit.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
  <slots>

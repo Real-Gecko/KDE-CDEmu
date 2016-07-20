@@ -52,10 +52,13 @@ public:
 
     Result mount(QString filename, unsigned int device) const;
     Result unmount(unsigned int device) const;
+    Result addDevice() const;
+    Result removeDevice() const;
 
 signals:
     void daemonChanged(bool running);
     void deviceChanged(unsigned int device);
+    void deviceMappingReady(unsigned int device);
 
 private:
     CDEmu();
@@ -66,6 +69,7 @@ private slots:
     void slotServiceUnregistered(const QString &service);
 
     void slotDeviceChanged(int);
+    void slotDeviceMappingReady(int);
 
 private:
     QDBusServiceWatcher m_watcher;

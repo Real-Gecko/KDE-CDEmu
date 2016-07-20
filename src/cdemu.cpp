@@ -36,6 +36,9 @@ CDEmu::CDEmu()
     QDBusConnection::sessionBus().connect("net.sf.cdemu.CDEmuDaemon", "/Daemon",
                                           "net.sf.cdemu.CDEmuDaemon", "DeviceStatusChanged",
                                           this, SLOT(slotDeviceChanged(int)));
+    QDBusConnection::sessionBus().connect("net.sf.cdemu.CDEmuDaemon", "/Daemon",
+                                          "net.sf.cdemu.CDEmuDaemon", "DeviceMappingReady",
+                                          this, SLOT(slotDeviceMappingReady(int)));
 }
 
 
@@ -185,6 +188,40 @@ void CDEmu::slotDeviceChanged(int device)
         return;
 
     emit deviceChanged((unsigned int)device);
+}
+
+
+void CDEmu::slotDeviceMappingReady(int device) {
+    emit deviceMappingReady((unsigned int)device);
+}
+
+
+CDEmu::Result CDEmu::addDevice() const {
+    if (!isDaemonRunning())
+        return DaemonNotRunning;
+    QDBusMessage m = QDBusMessage::createMethodCall("net.sf.cdemu.CDEmuDaemon", "/Daemon",
+                                                    "net.sf.cdemu.CDEmuDaemon", "AddDevice");
+
+    QDBusMessage reply = QDBusConnection::sessionBus().call(m);
+    if (reply.type() == QDBusMessage::ErrorMessage)
+        return UnknownError;
+
+    return Success;
+}
+
+
+CDEmu::Result CDEmu::removeDevice() const {
+    if (!isDaemonRunning())
+        return DaemonNotRunning;
+
+    QDBusMessage m = QDBusMessage::createMethodCall("net.sf.cdemu.CDEmuDaemon", "/Daemon",
+                                                    "net.sf.cdemu.CDEmuDaemon", "RemoveDevice");
+
+    QDBusMessage reply = QDBusConnection::sessionBus().call(m);
+    if (reply.type() == QDBusMessage::ErrorMessage)
+        return UnknownError;
+
+    return Success;
 }
 
 

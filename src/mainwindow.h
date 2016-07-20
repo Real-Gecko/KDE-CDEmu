@@ -23,9 +23,9 @@
 
 #include <KStatusNotifierItem>
 #include <KXmlGuiWindow>
-
-#include <QDBusConnection>
 #include <QLabel>
+
+//#include <QDBusConnection>
 
 #include "ui_mainwindow.h"
 
@@ -43,14 +43,21 @@ private slots:
     void slotSelectFile();
     void slotMount();
     void slotUnmount();
+    void slotSelectAndMount();
+    void slotHistoryClicked();
+    void slotShowHistoryContextMenu(QPoint);
+    void slotRemoveFromHistory();
+    void slotAddDevice();
+    void slotRemoveDevice();
+    void slotDeviceMappingReady(unsigned int);
 
 private:
     void updateDeviceList();
 
 private:
-    Ui::MainWindow m_ui;
     QLabel *m_statusLabel;
     KStatusNotifierItem m_trayIcon;
+    Ui::MainWindow m_ui;
 };
 
 #endif // MAINWINDOW_H

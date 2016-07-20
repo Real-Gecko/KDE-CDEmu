@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.3)
 project(kde_cdemu)
 
 configure_file(kdecdemuversion.h.in ${PROJECT_BINARY_DIR}/kdecdemuversion.h)
@@ -11,12 +11,22 @@ include(KDECMakeSettings)
 include(KDECompilerSettings)
 include(FeatureSummary)
 
-set(kde_cdemu_SRCS main.cpp kdecdemu.cpp mainwindow.cpp cdemu.cpp messagebox.cpp)
+set(kde_cdemu_SRCS main.cpp mainwindow.cpp cdemu.cpp messagebox.cpp)
 
 ki18n_wrap_ui(kde_cdemu_SRCS mainwindow.ui)
 add_executable(kde_cdemu ${kde_cdemu_SRCS})
 
-target_link_libraries(kde_cdemu KF5::KDELibs4Support KF5::KIOCore Qt5::Widgets)
+target_link_libraries(
+    kde_cdemu
+    KF5::I18n
+    KF5::CoreAddons
+    KF5::Notifications
+    KF5::XmlGui
+    KF5::ConfigWidgets
+    KF5::WidgetsAddons
+    KF5::DBusAddons
+    Qt5::Widgets
+)
 
 install(TARGETS kde_cdemu DESTINATION ${BIN_INSTALL_DIR})
 install(FILES kde_cdemuui.rc DESTINATION  ${KXMLGUI_INSTALL_DIR}/kde_cdemu)

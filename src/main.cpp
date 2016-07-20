@@ -18,40 +18,61 @@
  *   along with this program. If not, see <http://www.gnu.org/licenses/>.  *
  ***************************************************************************/
 
+#include <QApplication>
 #include <KAboutData>
-#include <KCmdLineArgs>
-#include <KUniqueApplication>
-#include <klocalizedstring.h>
-//kdelibs4support
-#include <k4aboutdata.h>
+#include <QCommandLineParser>
+#include <QSettings>
+#include <KDBusService>
+#include <QSessionManager>
 
-#include "kdecdemu.h"
+#include "mainwindow.h"
 #include "kdecdemuversion.h"
 
 int main (int argc, char *argv[])
 {
+    QApplication app(argc, argv);
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
+    app.setQuitOnLastWindowClosed( false );
+
+    KDBusService service(KDBusService::Unique);
+
     KLocalizedString::setApplicationDomain("kde_cdemu");
-    K4AboutData aboutData("kde_cdemu", 0, ki18n("KDE CDEmu Manager"), KDE_CDEMU_VERSION, ki18n("A KDE Frontend to CDEmu"), K4AboutData::License_GPL_V3,
-                         ki18n("Copyright (c) 2009-2013 Marcel Hasler"), KLocalizedString(), 
-                          "http://kde-apps.org/content/show.php?content=99752&forumpage=5");
+    KAboutData aboutData(
+        QStringLiteral("kde_cdemu"),
+        i18n("KDE CDEmu Manager"),
+        QStringLiteral(KDE_CDEMU_VERSION),
+        i18n("A KDE Frontend to CDEmu"),
+        KAboutLicense::LGPL_V3,
+        i18n("Copyright (c) 2009-2013 Marcel Hasler"),
+        QStringLiteral(""),
+        QStringLiteral("http://kde-apps.org/content/show.php?content=99752&forumpage=5")
+    );
     
-    aboutData.addAuthor(ki18n("Marcel Hasler"), ki18n("Developer & Maintainer"), "mahasler@gmail.com");
-    aboutData.setProgramIconName("media-optical");
+    aboutData.addAuthor(i18n("Marcel Hasler"), i18n("Developer & Maintainer"), QStringLiteral("mahasler@gmail.com"));
+    KAboutData::setApplicationData(aboutData);
 
     KLocalizedString::setApplicationDomain("kde_cdemu");
 
-    KCmdLineArgs::init(argc, argv, &aboutData);
+    QCommandLineParser parser;
 
-    KCmdLineOptions options;
-    options.add("mount <file>", ki18n("Mount an image"));
-    options.add("unmount <deviceNumber>", ki18n("Unmount an image"));
-    options.add("status", ki18n("Show information about devices"));
-    KCmdLineArgs::addCmdLineOptions(options);
-    KUniqueApplication::addCmdLineOptions();
+    parser.addHelpOption();
+    parser.addVersionOption();
+    parser.addPositionalArgument(QStringLiteral("mount <file>"), i18n("Mount an image"));
+    parser.addPositionalArgument(QStringLiteral("unmount <deviceNumber>"), i18n("Unmount an image"));
+    parser.addPositionalArgument(QStringLiteral("status"), i18n("Show information about devices"));
 
-    if (!KUniqueApplication::start())
-        return 0;
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
 
-    KDECDEmu app;
+//    app.setWindowIcon(QIcon::fromTheme("media-optical"));
+    MainWindow* mainWindow = new MainWindow();
+    mainWindow->show();
     return app.exec();
 }

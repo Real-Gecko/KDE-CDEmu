@@ -1,6 +1,13 @@
-KDE CDEmu Manager ChangeLog
-===========================
-(C) 2009-2013 by Marcel Hasler
+#KDE CDEmu Manager ChangeLog
+#===========================
+#(C) 2009-2013 by Marcel Hasler
+
+## [0.6.0] - 2016-07-20
+- Removed command line options
+- Ported to KF5
+- Revamped UI
+- More file extensions for file chooser, according to libmirage 3.0.4 description
+
 
 Changelog from 0.4 to 0.5:
 --------------------------
