@@ -14,7 +14,7 @@ provides=('kde-cdemu-manager')
 conflicts=('kde-cdemu-manager')
 makedepends=('cmake>=3.3' 'kdoctools' 'qt5-tools' 'extra-cmake-modules')
 source=(https://github.com/Real-Gecko/KDE-CDEmu/archive/$pkgver.tar.gz)
-md5sums=('0d5ffa51c73e591ba2959ef6a42b7941')
+md5sums=('a134b8090a7107884ca9f3d89e295eb9')
 
 build() {
   cd $srcdir/KDE-CDEmu-$pkgver
