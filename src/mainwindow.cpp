@@ -36,7 +36,7 @@
 #include <QUrl>
 #include <KMessageBox>
 
-static QString fileTypes("CD images (*.mds *.mdx *.b5t *.b6t *.ccd *.sub *.img *.cue *.bin *.toc *.cdi *.cif *.c2d *.iso *.nrg *.udf *.dmg *.cdr *.cso *.ecm *.gz *.gbi *.daa *.isz *.xz)");
+static QString fileTypes("CD images: *.mds *.mdx *.b5t *.b6t *.ccd *.sub *.img *.cue *.bin *.toc *.cdi *.cif *.c2d *.iso *.nrg *.udf (*.mds *.mdx *.b5t *.b6t *.ccd *.sub *.img *.cue *.bin *.toc *.cdi *.cif *.c2d *.iso *.nrg *.udf);;Container images: *.dmg *.cdr *.cso *.ecm *.gz *.gbi *.daa *.isz *.xz (*.dmg *.cdr *.cso *.ecm *.gz *.gbi *.daa *.isz *.xz)");
 
 MainWindow::MainWindow(QWidget *parent)
     : KXmlGuiWindow(parent),

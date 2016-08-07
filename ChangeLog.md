@@ -2,6 +2,10 @@
 #===========================
 #(C) 2009-2013 by Marcel Hasler
 
+## [0.6.1] - 2016-08-07
+- Updated Spanish translation, by Gustavo Alvarez
+- Moved container type images (dmg, cdr, cso, ecm, gz, gbi, daa, isz, xz) to another category in file chooser to avoid mess.
+
 ## [0.6.0] - 2016-07-20
 - Removed command line options
 - Ported to KF5
