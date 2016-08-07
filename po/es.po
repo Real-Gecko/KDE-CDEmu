@@ -1,20 +1,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# sL1pKn07 <sl1pkn07@gmail.com>, 2009, 2013.
+# Gustavo Alvarez <sl1pkn07@gmail.com>, 2009, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: mahasler@gmail.com\n"
 "POT-Creation-Date: 2013-01-12 23:09+0100\n"
-"PO-Revision-Date: 2013-01-12 23:10+0100\n"
-"Last-Translator: Marcel Hasler\n"
-"Language-Team: Spanish <kde-i18n-de@kde.org>\n"
+"PO-Revision-Date: 2016-08-07 00:22+0100\n"
+"Last-Translator: Gustavo Alvarez <sl1pkn07@gmail.com>\n"
+"Language-Team: Spanish <>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: file: src/mainwindow.ui:20
@@ -27,7 +27,7 @@ msgstr "KDE CDEmu Manager"
 #. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
 #: po/rc.cpp:6 rc.cpp:6
 msgid "Device"
-msgstr "Gerät"
+msgstr "Dispositivo"
 
 #. i18n: file: src/mainwindow.ui:63
 #. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
@@ -39,7 +39,7 @@ msgstr "Archivo"
 #. i18n: ectx: property (title), widget (QGroupBox, SelectImageBox)
 #: po/rc.cpp:12 rc.cpp:12
 msgid "Select image"
-msgstr "Seleccine imagen"
+msgstr "Seleccione imagen"
 
 #. i18n: file: src/mainwindow.ui:80
 #. i18n: ectx: property (text), widget (KPushButton, SelectFileButton)
@@ -71,7 +71,7 @@ msgstr "sl1pkn07@gmail.com"
 
 #: src/main.cpp:30
 msgid "A KDE Frontend to CDEmu"
-msgstr "Entorno grafico KDE de CDEmu"
+msgstr "Entorno gráfico KDE de CDEmu"
 
 #: src/main.cpp:31
 msgid "Copyright (c) 2009-2013 Marcel Hasler"
@@ -83,31 +83,31 @@ msgstr "Marcel Hasler"
 
 #: src/main.cpp:32
 msgid "Developer & Maintainer"
-msgstr "Desarollo & Mantenimiento"
+msgstr "Desarrollo & Mantenimiento"
 
 #: src/main.cpp:40
 msgid "Mount an image"
-msgstr "Montar Imagen"
+msgstr "Montar una imagen"
 
 #: src/main.cpp:41
 msgid "Unmount an image"
-msgstr "Desmontar Imagen"
+msgstr "Desmontar una imagen"
 
 #: src/main.cpp:42
 msgid "Show information about devices"
-msgstr "Mostrar informacion acerca de los dispositivos"
+msgstr "Mostrar información acerca de los dispositivos"
 
 #: src/mainwindow.cpp:103
 msgid "CDEmu daemon running."
-msgstr "CDEmu-Daemon funcionando."
+msgstr "El demonio CDEmu se está ejecutando."
 
 #: src/mainwindow.cpp:106
 msgid "CDEmu daemon not running."
-msgstr "El Demonio CDEmu no funciona."
+msgstr "El Demonio CDEmu no se está ejecutando."
 
 #: src/mainwindow.cpp:121
 msgid "Please select a file first."
-msgstr "Porfavor seleccione archivo primero"
+msgstr "Por favor seleccione un archivo primero."
 
 #: src/mainwindow.cpp:121 src/mainwindow.cpp:128 src/mainwindow.cpp:145
 #: src/messagebox.cpp:65
@@ -116,41 +116,35 @@ msgstr "Error"
 
 #: src/mainwindow.cpp:128 src/mainwindow.cpp:145
 msgid "Please select a device first."
-msgstr "Porfavor, seleccione unidad primero."
+msgstr "Por favor, seleccione una unidad primero."
 
 #: src/messagebox.cpp:33
 msgid "Everything OK."
-msgstr ""
+msgstr "Todo OK."
 
 #: src/messagebox.cpp:37
-#, fuzzy
 msgid "The selected virtual device is in use."
-msgstr ""
-"No se puede montar la imagen. Todas las unidades virtuales están en uso."
+msgstr "La unidad virtual está en uso."
 
 #: src/messagebox.cpp:41
 msgid "The selected virtual device is not available."
-msgstr ""
+msgstr "La unidad seleccionada no está disponible."
 
 #: src/messagebox.cpp:45
-#, fuzzy
 msgid "All virtual devices are in use."
-msgstr ""
-"No se puede montar la imagen. Todas las unidades virtuales están en uso."
+msgstr "Todas las unidades están en uso."
 
 #: src/messagebox.cpp:49
-#, fuzzy
 msgid "The file doesn't exist."
-msgstr "No se puede montar la imagen. El archivo no existe"
+msgstr "El archivo no existe."
 
 #: src/messagebox.cpp:53
 msgid "Unable to connect to the CDEmu daemon."
-msgstr ""
+msgstr "Imposible conectar con el demonio CDEmu."
 
 #: src/messagebox.cpp:57
-#, fuzzy
 msgid "An unknown error occured."
-msgstr "No se puede montar la imagen! Ha ocurrido un error desconocido."
+msgstr "Ha ocurrido un error desconocido."
 
 #~ msgid "Drive"
 #~ msgstr "Unidad"
