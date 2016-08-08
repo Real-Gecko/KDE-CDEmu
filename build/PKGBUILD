@@ -9,30 +9,32 @@ pkgdesc="KDE CDEmu Manager is a simple frontend for CDEmu.KF5 version"
 arch=('i686' 'x86_64')
 url="https://github.com/Real-Gecko/KDE-CDEmu"
 license=('GPL')
+depends=('kxmlgui' 'knotifications')
 depends=('cdemu-daemon>=2.0')
 provides=('kde-cdemu-manager')
 conflicts=('kde-cdemu-manager')
-makedepends=('cmake>=3.3' 'kdoctools' 'qt5-tools' 'extra-cmake-modules')
+makedepends=('extra-cmake-modules' 'kdoctools' 'qt5-tools' 'python')
 source=(https://github.com/Real-Gecko/KDE-CDEmu/archive/$pkgver.tar.gz)
 md5sums=('a134b8090a7107884ca9f3d89e295eb9')
 
+prepare() {
+  mkdir -p build
+}
+
 build() {
-  cd $srcdir/KDE-CDEmu-$pkgver
-  mkdir -p build && cd build
-  cmake -DCMAKE_INSTALL_PREFIX=`kf5-config --prefix` \
+  cd build
+  cmake ../KDE-CDEmu-$pkgver \
+    -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
-    -DLIB_INSTALL_DIR=lib \
+    -DKDE_INSTALL_LIBDIR=lib \
     -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-    -DSYSCONF_INSTALL_DIR=/etc \
-    -DBUILD_TESTING=OFF \
-    ..
-    
+    -DBUILD_TESTING=OFF
+
   make
 }
 
-package()
-{
-  cd $srcdir/KDE-CDEmu-$pkgver/build
-  make DESTDIR=$pkgdir install
+package() {
+  make -C build DESTDIR=$pkgdir install
 }
+
 
