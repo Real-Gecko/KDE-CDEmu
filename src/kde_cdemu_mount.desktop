@@ -10,5 +10,6 @@ X-KDE-StartupNotify=false
 Name=Mount image
 Name[de]=Abbild einbinden
 Name[es]=Montar Imagen
+Name[ru]=Подключить образ
 Icon=media-optical
 Exec=kde_cdemu --mount %u
