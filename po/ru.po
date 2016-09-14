@@ -1,76 +1,78 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) 2016
+# This file is distributed under the same license as the KDE-CDEmu package.
 #
+# Alexander Golikov <alex@ws54.tk>, 2016.#
+
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: mahasler@gmail.com\n"
-"POT-Creation-Date: 2013-01-12 23:09+0100\n"
-"PO-Revision-Date: 2013-01-12 23:09+0100\n"
-"Last-Translator: Lin Ziyun <ohmygod19993@gmail.com>\n"
-"Language-Team: Chinese <LL@li.org>\n"
-"Language: zh_CN\n"
+"Project-Id-Version: ru\n"
+"Report-Msgid-Bugs-To: alex@ws54.tk\n"
+"POT-Creation-Date: 2016-09-12 13:14+0700\n"
+"PO-Revision-Date: 2016-09-12 13:14+0700\n"
+"Last-Translator: Alexander Golikov <alex@ws54.tk>\n"
+"Language-Team: Russian <kde-i18n-ru@kde.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. i18n: file: src/mainwindow.ui:20
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: po/rc.cpp:3 src/main.cpp:30 rc.cpp:3
 msgid "KDE CDEmu Manager"
-msgstr "KDE CDEmu 管理器"
+msgstr "KDE CDEmu Менеджер"
 
 #. i18n: file: src/mainwindow.ui:58
 #. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
 #: po/rc.cpp:6 rc.cpp:6
 msgid "Device"
-msgstr "设备"
+msgstr "Устройство"
 
 #. i18n: file: src/mainwindow.ui:63
 #. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
 #: po/rc.cpp:9 src/mainwindow.cpp:58 rc.cpp:9
 msgid "File"
-msgstr "文件"
+msgstr "Файл"
 
 #. i18n: file: src/mainwindow.ui:71
 #. i18n: ectx: property (title), widget (QGroupBox, SelectImageBox)
 #: po/rc.cpp:12 rc.cpp:12
 msgid "Select image"
-msgstr "选择镜像"
+msgstr "Выбрать образ"
 
 #. i18n: file: src/mainwindow.ui:80
 #. i18n: ectx: property (text), widget (KPushButton, SelectFileButton)
 #: po/rc.cpp:15 rc.cpp:15
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #. i18n: file: src/mainwindow.ui:105
 #. i18n: ectx: property (text), widget (KPushButton, MountButton)
 #: po/rc.cpp:18 rc.cpp:18
 msgid "Mount"
-msgstr "挂载"
+msgstr "Монтировать"
 
 #. i18n: file: src/mainwindow.ui:125
 #. i18n: ectx: property (text), widget (KPushButton, UnmountButton)
 #: po/rc.cpp:21 rc.cpp:21
 msgid "Unmount"
-msgstr "卸载"
+msgstr "Отмонтировать"
 
 #: po/rc.cpp:22 rc.cpp:22
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Lin Ziyun"
+msgstr "Alexander Golikov"
 
 #: po/rc.cpp:23 rc.cpp:23
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ohmygod19993@gmail.com"
+msgstr "alex@ws54.tk"
 
 #: src/main.cpp:30
 msgid "A KDE Frontend to CDEmu"
-msgstr "CDEmu的KDE前端"
+msgstr "Интерфейс KDE для CDEmu"
 
 #: src/main.cpp:31
 msgid "Copyright (c) 2009-2013 Marcel Hasler"
@@ -82,65 +84,65 @@ msgstr "Marcel Hasler"
 
 #: src/main.cpp:32
 msgid "Developer & Maintainer"
-msgstr "开发者与维护者"
+msgstr "Developer & Maintainer"
 
 #: src/main.cpp:40
 msgid "Mount an image"
-msgstr "挂载一个镜像"
+msgstr "Подключить образ"
 
 #: src/main.cpp:41
 msgid "Unmount an image"
-msgstr "卸载一个镜像"
+msgstr "Отключить образ"
 
 #: src/main.cpp:42
 msgid "Show information about devices"
-msgstr "显示设备信息"
+msgstr "Показать ниформацию об устройствах"
 
 #: src/mainwindow.cpp:103
 msgid "CDEmu daemon running."
-msgstr "CDEmu守护进程正在运行。"
+msgstr "CDEmu демон запущен."
 
 #: src/mainwindow.cpp:106
 msgid "CDEmu daemon not running."
-msgstr "CDEmu守护进程未运行。"
+msgstr "CDEmu демон не запущен."
 
 #: src/mainwindow.cpp:121
 msgid "Please select a file first."
-msgstr "请先选择一个文件。"
+msgstr "Сначала выберите файл."
 
 #: src/mainwindow.cpp:121 src/mainwindow.cpp:128 src/mainwindow.cpp:145
 #: src/messagebox.cpp:65
 msgid "Error"
-msgstr "错误"
+msgstr "Ошибка"
 
 #: src/mainwindow.cpp:128 src/mainwindow.cpp:145
 msgid "Please select a device first."
-msgstr "请先选择一个设备。"
+msgstr "Сначала выберите устройство."
 
 #: src/messagebox.cpp:33
 msgid "Everything OK."
-msgstr "一切正常。"
+msgstr "Всё Хорошо."
 
 #: src/messagebox.cpp:37
 msgid "The selected virtual device is in use."
-msgstr "选中的设备被占用。"
+msgstr "Выбранный виртуальный привод уже используется."
 
 #: src/messagebox.cpp:41
 msgid "The selected virtual device is not available."
-msgstr "选中的设备不可用。"
+msgstr "Выбранный виртуальный привод недоступен."
 
 #: src/messagebox.cpp:45
 msgid "All virtual devices are in use."
-msgstr "所有虚拟设备均被占用。"
+msgstr "Все виртуальные приводы уже используется."
 
 #: src/messagebox.cpp:49
 msgid "The file doesn't exist."
-msgstr "文件不存在。"
+msgstr "Файл не сущуствует."
 
 #: src/messagebox.cpp:53
 msgid "Unable to connect to the CDEmu daemon."
-msgstr "无法连接到CDEmu守护进程。"
+msgstr "Не удается подключиться к демону CDEmu"
 
 #: src/messagebox.cpp:57
 msgid "An unknown error occured."
-msgstr "未知错误。"
+msgstr "Произошла неизвестная ошибка."
