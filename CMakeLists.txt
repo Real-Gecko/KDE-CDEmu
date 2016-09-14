@@ -20,7 +20,7 @@ find_package(KF5 REQUIRED COMPONENTS
     DBusAddons      #KDBusService
 )
 
-set(KDE_CDEMU_VERSION "0.6.1")
+set(KDE_CDEMU_VERSION "0.6.2")
 
 add_subdirectory(src)
 add_subdirectory(po)

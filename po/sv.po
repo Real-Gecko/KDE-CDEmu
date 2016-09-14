@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: mahasler@gmail.com\n"
-"POT-Creation-Date: 2013-01-12 23:09+0100\n"
+"POT-Creation-Date: 2016-09-14 22:49+0600\n"
 "PO-Revision-Date: 2013-01-12 23:11+0100\n"
 "Last-Translator: Marcel Hasler\n"
 "Language-Team: Swedish <kde-i18n-de@kde.org>\n"
@@ -17,138 +17,150 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. i18n: file: src/mainwindow.ui:20
-#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
-#: po/rc.cpp:3 src/main.cpp:30 rc.cpp:3
+#: build/src/ui_mainwindow.h:119 src/main.cpp:48
 msgid "KDE CDEmu Manager"
 msgstr "KDE CDEmu Manager"
 
-#. i18n: file: src/mainwindow.ui:58
-#. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
-#: po/rc.cpp:6 rc.cpp:6
-msgid "Device"
+#: build/src/ui_mainwindow.h:120
+msgid "Recently used images"
 msgstr ""
 
-#. i18n: file: src/mainwindow.ui:63
-#. i18n: ectx: property (text), widget (QTreeWidget, DeviceList)
-#: po/rc.cpp:9 src/mainwindow.cpp:58 rc.cpp:9
+#: build/src/ui_mainwindow.h:122 build/src/ui_mainwindow.h:125
+msgid ""
+"<html><head/><body><p>Recently used images - click to mount</p></body></html>"
+msgstr ""
+
+#: build/src/ui_mainwindow.h:128 src/mainwindow.cpp:69
 msgid "File"
 msgstr "Fil"
 
-#. i18n: file: src/mainwindow.ui:71
-#. i18n: ectx: property (title), widget (QGroupBox, SelectImageBox)
-#: po/rc.cpp:12 rc.cpp:12
-msgid "Select image"
-msgstr "Välj Avbild"
+#: build/src/ui_mainwindow.h:129
+msgid "Device"
+msgstr ""
 
-#. i18n: file: src/mainwindow.ui:80
-#. i18n: ectx: property (text), widget (KPushButton, SelectFileButton)
-#: po/rc.cpp:15 rc.cpp:15
-msgid "..."
-msgstr "..."
+#: build/src/ui_mainwindow.h:131 build/src/ui_mainwindow.h:134
+msgid ""
+"<html><head/><body><p>List of available devices , double click to select "
+"image</p></body></html>"
+msgstr ""
 
-#. i18n: file: src/mainwindow.ui:105
-#. i18n: ectx: property (text), widget (KPushButton, MountButton)
-#: po/rc.cpp:18 rc.cpp:18
-msgid "Mount"
-msgstr "Montera"
-
-#. i18n: file: src/mainwindow.ui:125
-#. i18n: ectx: property (text), widget (KPushButton, UnmountButton)
-#: po/rc.cpp:21 rc.cpp:21
+#: build/src/ui_mainwindow.h:136
 msgid "Unmount"
 msgstr "Avmontera"
 
-#: po/rc.cpp:22 rc.cpp:22
+#: build/src/ui_mainwindow.h:137
+msgid "Add Device"
+msgstr ""
+
+#: build/src/ui_mainwindow.h:138
+msgid "Remove Device"
+msgstr ""
+
+#: po/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Dyrver Eriksson"
 
-#: po/rc.cpp:23 rc.cpp:23
+#: po/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dyrver.eriksson@gmail.com"
 
-#: src/main.cpp:30
+#: src/main.cpp:50
 msgid "A KDE Frontend to CDEmu"
 msgstr "En KDE framände till CDEmu"
 
-#: src/main.cpp:31
+#: src/main.cpp:52
 msgid "Copyright (c) 2009-2013 Marcel Hasler"
 msgstr "Copyright (c) 2009-2013 Marcel Hasler"
 
-#: src/main.cpp:32
+#: src/main.cpp:57
 msgid "Marcel Hasler"
 msgstr "Marcel Hasler"
 
-#: src/main.cpp:32
+#: src/main.cpp:57
 msgid "Developer & Maintainer"
 msgstr "Utvecklare & Underhållare"
 
-#: src/main.cpp:40
+#: src/main.cpp:66
 msgid "Mount an image"
 msgstr "Montera en avbild"
 
-#: src/main.cpp:41
+#: src/main.cpp:67
 msgid "Unmount an image"
 msgstr "Avmontera en avbild"
 
-#: src/main.cpp:42
+#: src/main.cpp:68
 msgid "Show information about devices"
 msgstr "Visa information om enheter"
 
-#: src/mainwindow.cpp:103
+#: src/mainwindow.cpp:114
 msgid "CDEmu daemon running."
 msgstr "CDEmu bakgrundsprogram körs."
 
-#: src/mainwindow.cpp:106
+#: src/mainwindow.cpp:117
 msgid "CDEmu daemon not running."
 msgstr "CDEmu bakgrundsprogram körs inte."
 
-#: src/mainwindow.cpp:121
-msgid "Please select a file first."
-msgstr "Var god välj en avbild först."
-
-#: src/mainwindow.cpp:121 src/mainwindow.cpp:128 src/mainwindow.cpp:145
-#: src/messagebox.cpp:65
-msgid "Error"
-msgstr "Fel"
-
-#: src/mainwindow.cpp:128 src/mainwindow.cpp:145
+#: src/mainwindow.cpp:140 src/mainwindow.cpp:157 src/mainwindow.cpp:175
 msgid "Please select a device first."
 msgstr "Var god välj en enhet först."
 
-#: src/messagebox.cpp:33
+#: src/mainwindow.cpp:140 src/mainwindow.cpp:157 src/mainwindow.cpp:175
+#: src/mainwindow.cpp:209 src/messagebox.cpp:66
+msgid "Error"
+msgstr "Fel"
+
+#: src/mainwindow.cpp:169
+#, fuzzy
+msgid "Select image file"
+msgstr "Välj Avbild"
+
+#: src/mainwindow.cpp:209
+#, fuzzy
+msgid "All devices are busy."
+msgstr "Kunde inte montera en avbild! Alla virtuella enheter är upptagna."
+
+#: src/messagebox.cpp:34
 msgid "Everything OK."
 msgstr ""
 
-#: src/messagebox.cpp:37
+#: src/messagebox.cpp:38
 #, fuzzy
 msgid "The selected virtual device is in use."
 msgstr "Kunde inte montera en avbild! Alla virtuella enheter är upptagna."
 
-#: src/messagebox.cpp:41
+#: src/messagebox.cpp:42
 msgid "The selected virtual device is not available."
 msgstr ""
 
-#: src/messagebox.cpp:45
+#: src/messagebox.cpp:46
 #, fuzzy
 msgid "All virtual devices are in use."
 msgstr "Kunde inte montera en avbild! Alla virtuella enheter är upptagna."
 
-#: src/messagebox.cpp:49
+#: src/messagebox.cpp:50
 #, fuzzy
 msgid "The file doesn't exist."
 msgstr "Kunde inte montera avbild! Filen existerar inte."
 
-#: src/messagebox.cpp:53
+#: src/messagebox.cpp:54
 msgid "Unable to connect to the CDEmu daemon."
 msgstr ""
 
-#: src/messagebox.cpp:57
+#: src/messagebox.cpp:58
 #, fuzzy
 msgid "An unknown error occured."
 msgstr "Kunde inte montera avbild! Ett okänt fel uppstod."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Mount"
+#~ msgstr "Montera"
+
+#~ msgid "Please select a file first."
+#~ msgstr "Var god välj en avbild först."
 
 #~ msgid "Drive"
 #~ msgstr "Enhet"

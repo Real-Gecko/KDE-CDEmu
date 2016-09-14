@@ -2,6 +2,12 @@
 #===========================
 #(C) 2009-2013 by Marcel Hasler
 
+## [0.6.2] - 2016-09-14
+- Russian translation by [Alexander Golikov](https://github.com/alexws54tk)
+- Fixed removing history items
+- No need to select device while using history, next free device will be taken
+- Updated *.po files for translators
+
 ## [0.6.1] - 2016-08-07
 - Updated Spanish translation, by Gustavo Alvarez
 - Moved container type images (dmg, cdr, cso, ecm, gz, gbi, daa, isz, xz) to another category in file chooser to avoid mess.

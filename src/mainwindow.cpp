@@ -204,8 +204,11 @@ void MainWindow::slotHistoryClicked()
     int device = m_ui.deviceList->indexOfTopLevelItem(m_ui.deviceList->currentItem());
     if (device < 0)
     {
-        KMessageBox::information(this, i18n("Please select a device first."), i18n("Error"));
-        return;
+        device = CDEmu::instance()->nextFreeDevice();
+        if (device < 0) {
+            KMessageBox::information(this, i18n("All devices are busy."), i18n("Error"));
+            return;
+        }
     }
 
     int index = m_ui.historyList->currentRow();
@@ -230,6 +233,9 @@ void MainWindow::slotShowHistoryContextMenu(QPoint pos) {
 
 
 void MainWindow::slotRemoveFromHistory() {
+    QListWidgetItem *item = m_ui.historyList->takeItem(m_ui.historyList->currentRow());
+    delete item;
+
     QSettings settings("kde.org", "kde_cdemu");
     settings.beginWriteArray("History");
     for(int i = 0; i < m_ui.historyList->count(); ++i) {
