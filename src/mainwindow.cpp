@@ -177,7 +177,7 @@ void MainWindow::slotSelectAndMount()
     }
 
     CDEmu::Result result = CDEmu::instance()->mount(file, (unsigned int)device);
-    if (!result == CDEmu::Success)
+    if (!(result == CDEmu::Success))
     {
         MessageBox::error(result);
         return;
@@ -215,7 +215,7 @@ void MainWindow::slotHistoryClicked()
     QString file = m_ui.historyList->item(index)->text();
 
     CDEmu::Result result = CDEmu::instance()->mount(file, (unsigned int)device);
-    if (!result == CDEmu::Success)
+    if (!(result == CDEmu::Success))
     {
         MessageBox::error(result);
         return;
@@ -248,7 +248,7 @@ void MainWindow::slotRemoveFromHistory() {
 
 void MainWindow::slotAddDevice() {
     CDEmu::Result result = CDEmu::instance()->addDevice();
-    if (!result == CDEmu::Success) {
+    if (!(result == CDEmu::Success)) {
         MessageBox::error(result);
         return;
     }
@@ -258,7 +258,7 @@ void MainWindow::slotAddDevice() {
 
 void MainWindow::slotRemoveDevice() {
     CDEmu::Result result = CDEmu::instance()->removeDevice();
-    if (!result == CDEmu::Success) {
+    if (!(result == CDEmu::Success)) {
         MessageBox::error(result);
         return;
     }
